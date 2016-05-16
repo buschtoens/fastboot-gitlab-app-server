@@ -9,7 +9,7 @@ const FastBootAppServer = require('fastboot-app-server');
 
 
 class FastBootGitLabAppServer extends FastBootAppServer {
-  constructor({ url, token, workerCount, ui }) {
+  constructor({ url, token, workerCount, ui } = {}) {
     assert(url && token, 'FastBootGitLabAppServer must be provided with a url and a token option.');
 
     const downloader = new GitLabDownloader({ url, token });
